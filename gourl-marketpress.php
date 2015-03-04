@@ -106,7 +106,7 @@ function gourl_mp_gateway_load()
 				
 			$this->method_description  		= "<a target='_blank' href='https://gourl.io/'><img border='0' style='float:left; margin-right:25px' src='https://gourl.io/images/gourlpayments.png'></a>";
 			$this->method_description  	   .= sprintf(__( '<a target="_blank" href="%s">Plugin Homepage</a> &#160;&amp;&#160; <a target="_blank" href="%s">screenshots &#187;</a>', GOURLMP ), "https://gourl.io/bitcoin-payments-wpmudev-marketpress.html", "https://gourl.io/bitcoin-payments-wpmudev-marketpress.html#screenshot") . "<br>";
-			$this->method_description  	   .= sprintf(__( '<a target="_blank" href="%s">Plugin on Github - 100%% Free Open Source &#187;</a>', GOURLMP ), "https://github.com/cryptoapi/Bitcoin-Payments-Woocommerce") . "<br><br>";
+			$this->method_description  	   .= sprintf(__( '<a target="_blank" href="%s">Plugin on Github - 100%% Free Open Source &#187;</a>', GOURLMP ), "https://github.com/cryptoapi/Bitcoin-Payments-MarketPress") . "<br><br>";
 			
 			if (class_exists('gourlclass') && defined('GOURL') && defined('GOURL_ADMIN') && is_object($gourl))
 			{
