@@ -62,6 +62,12 @@ In the search field type "GoUrl MarketPress" and click Search Plugins. Once you'
 * Go to Installed Plugins
 * Activate the "GoUrl MarketPress - Bitcoin Altcoin Payment Gateway Addon"
 
+= IMPORTANT - Optional support HTML in Transaction Notes =
+
+Marketpress doesn't support html in notes by default, and you need to add support - 
+Open file wordpress-ecommerce/marketpress.php, find text below (line 5324) and remove "esc_html" 
+
+Read here:  https://gourl.io/bitcoin-payments-wpmudev-marketpress.html#notes
 
 
 
@@ -79,5 +85,5 @@ In the search field type "GoUrl MarketPress" and click Search Plugins. Once you'
 == Changelog ==
 
 = 1.0.0 =
-Initial Release  
+Initial Release 
     
