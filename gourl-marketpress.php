@@ -617,5 +617,5 @@ function gourl_mp_gateway_load()
 }
 
 
-add_action( 'plugins_loaded', 'gourl_mp_gateway_load', 10 );
+add_action( 'plugins_loaded', 'gourl_mp_gateway_load', 4 ); 
 
