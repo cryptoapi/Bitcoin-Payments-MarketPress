@@ -2,11 +2,11 @@
 GoUrl Wpmudev MarketPress - Bitcoin Altcoin Payment Gateway Addon
 -----------------------------------------------------------
 
-Version 1.0.0
+Version 1.1.0
 
-**Wordpress Plugin provides a Bitcoin/Altcoins Payment Gateway for Wpmudev MarketPress 2.9+ or higher.**
+**Wordpress Plugin provides a Bitcoin/Altcoin Payment Gateway for Wpmudev MarketPress 2.9+ or higher.**
 
-Accept Bitcoin, Litecoin, Speedcoin, Dogecoin, Paycoin, Darkcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin on Website Online
+Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin on Website Online
 
 * Author URI: [https://gourl.io](https://gourl.io)
 * Plugin Page: [https://gourl.io/bitcoin-payments-wpmudev-marketpress.html](https://gourl.io/bitcoin-payments-wpmudev-marketpress.html)
@@ -14,7 +14,7 @@ Accept Bitcoin, Litecoin, Speedcoin, Dogecoin, Paycoin, Darkcoin, Reddcoin, Potc
 * Screenshots: [https://gourl.io/bitcoin-payments-wpmudev-marketpress.html#screenshot](https://gourl.io/bitcoin-payments-wpmudev-marketpress.html#screenshot)
 * Requires at least: Wordpress 3.5 and MarketPress 2.9
 * Tested up to: Wordpress 4.2
-* Stable Tag: 1.0.0
+* Stable Tag: 1.1.0
 * License: GNU Version 2 or Any Later Version
 
 
@@ -67,4 +67,5 @@ Plugin Options
 
   
 # ![MarketPress-Plugin-Options](https://gourl.io/images/marketpress/screenshot-1.png)
-  
+   
+
