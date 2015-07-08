@@ -3,10 +3,10 @@ Contributors: gourl, GoUrl.io
 Plugin Name: GoUrl MarketPress - Bitcoin Altcoin Payment Gateway Addon
 Plugin URI: https://gourl.io/bitcoin-payments-wpmudev-marketpress.html
 Author URI: https://gourl.io 
-Tags: marketpress, bitcoin, bitcoins, bitcoin payments, gourl, cryptocurrency, btc, coinbase, bitpay, ecommerce, paypal, accept bitcoin, shop, payment, payment gateway, litecoin, dogecoin, paycoin, reddcoin, speedcoin, dash, potcoin, feathercoin, vertcoin, vericoin, peercoin
+Tags: marketpress, bitcoin, bitcoins, bitcoin payments, gourl, cryptocurrency, btc, coinbase, bitpay, ecommerce, paypal, accept bitcoin, shop, payment, payment gateway, litecoin, dogecoin, darkcoin, dash, speedcoin, vertcoin, reddcoin, feathercoin, vericoin, potcoin, paycoin, monetaryunit, peercoin
 Requires at least: 3.5
-Tested up to: 4.2
-Stable Tag: 1.1.0
+Tested up to: 4.3
+Stable Tag: 1.1.1
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ Wordpress Plugin for MarketPress Features -
 
 * 100% Free Open Source Plugin on [Github.com](https://github.com/cryptoapi/Bitcoin-Payments-MarketPress)
 * Provides a Cryptocurrency Payment Gateway for [MarketPress 2.9 or higher](https://wordpress.org/plugins/wordpress-ecommerce/)
-* Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin payments in MarketPress
+* Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin, MonetaryUnit payments in MarketPress
 * No Monthly Fee, Transaction Fee from 0%
 * Product Prices in USD/EUR/GBP/etc. Google/Bitstamp/Cryptsy Live Exchange Rates
 * Direct Integration on your website, no external payment pages opens (as other payment gateways offer)
@@ -88,11 +88,14 @@ Read here:  https://gourl.io/bitcoin-payments-wpmudev-marketpress.html#notes
 
 == Changelog ==
 
+= 1.1.1 =
+Add MonetaryUnit [MUE] cryptocurrency
+
 = 1.1.0 =
-Added Peercoin 
-Spanish payment box localisation
+* Add Peercoin [PPC] cryptocurrency
+* Add Spanish Payment Box translation
 
 = 1.0.0 =
 Initial Release 
-    
+  
  

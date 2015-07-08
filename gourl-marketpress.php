@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: 		GoUrl MarketPress - Bitcoin Altcoin Payment Gateway Addon
-Description: 		Provides a <a href="https://gourl.io">GoUrl.io</a> Bitcoin/Altcoin Payment Gateway for <a href="https://wordpress.org/plugins/wordpress-ecommerce/">MarketPress 2.9+</a>. Convert your USD/EUR/etc prices to cryptocoins using Google/Bitstamp/Cryptsy Live Exchange Rates; sends the amount straight to your business Bitcoin/Altcoin wallet. Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin payments online. No Chargebacks, Global, Secure. All in automatic mode.
-Version: 			1.1.0
+Description: 		Provides a <a href="https://gourl.io">GoUrl.io</a> Bitcoin/Altcoin Payment Gateway for <a href="https://wordpress.org/plugins/wordpress-ecommerce/">MarketPress 2.9+</a>. Convert your USD/EUR/etc prices to cryptocoins using Google/Bitstamp/Cryptsy Live Exchange Rates; sends the amount straight to your business Bitcoin/Altcoin wallet. Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin, MonetaryUnit payments online. No Chargebacks, Global, Secure. All in automatic mode.
+Version: 			1.1.1
 Author: 			GoUrl.io
 Author URI: 		https://gourl.io
 License: 			GPLv2
@@ -110,9 +110,9 @@ function gourl_mp_gateway_load()
 			
 			if (class_exists('gourlclass') && defined('GOURL') && defined('GOURL_ADMIN') && is_object($gourl))
 			{
-				if (true === version_compare(GOURL_VERSION, '1.3', '<'))
+				if (true === version_compare(GOURL_VERSION, '1.3.3', '<'))
 				{
-					$this->method_description .= '<div class="error"><p>' .sprintf(__( '<b>Your GoUrl Bitcoin Gateway <a href="%s">Main Plugin</a> version is too old. Requires 1.3 or higher version. Please <a href="%s">update</a> to latest version.</b>  &#160; &#160; &#160; &#160; Information: &#160; <a href="https://gourl.io/bitcoin-wordpress-plugin.html">Main Plugin Homepage</a> &#160; &#160; &#160; <a href="https://wordpress.org/plugins/gourl-bitcoin-payment-gateway-paid-downloads-membership/">WordPress.org Plugin Page</a>', GOURLMP ), GOURL_ADMIN.GOURL, $this->mainplugin_url).'</p></div>';
+					$this->method_description .= '<div class="error"><p>' .sprintf(__( '<b>Your GoUrl Bitcoin Gateway <a href="%s">Main Plugin</a> version is too old. Requires 1.3.3 or higher version. Please <a href="%s">update</a> to latest version.</b>  &#160; &#160; &#160; &#160; Information: &#160; <a href="https://gourl.io/bitcoin-wordpress-plugin.html">Main Plugin Homepage</a> &#160; &#160; &#160; <a href="https://wordpress.org/plugins/gourl-bitcoin-payment-gateway-paid-downloads-membership/">WordPress.org Plugin Page</a>', GOURLMP ), GOURL_ADMIN.GOURL, $this->mainplugin_url).'</p></div>';
 				}
 				elseif (true === version_compare($mp->version, '2.9.5', '<'))
 				{
@@ -142,7 +142,7 @@ function gourl_mp_gateway_load()
 			}
 				
 			$this->method_description .= "<br/><b>" . __( 'Secure payments with virtual currency in Marketpress. &#160; <a target="_blank" href="https://bitcoin.org/">What is Bitcoin?</a>', GOURLMP ) . '</b><br/>';
-			$this->method_description .= sprintf(__( 'Accept %s payments online in Marketpress.', GOURLMP), ($this->coin_names?ucwords(implode(", ", $this->coin_names)):"Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin")).'<br/>';
+			$this->method_description .= sprintf(__( 'Accept %s payments online in Marketpress.', GOURLMP), ($this->coin_names?ucwords(implode(", ", $this->coin_names)):"Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin, MonetaryUnit")).'<br/>';
 			$this->method_description .= __( 'If you use multiple stores/sites online, please create separate <a target="_blank" href="https://gourl.io/editrecord/coin_boxes/0">GoUrl Payment Box</a> (with unique payment box public/private keys) for each of your stores/websites. Do not use the same GoUrl Payment Box with the same public/private keys on your different websites/stores.', GOURLMP );
 			$this->method_description .= '<br/><br/>';
 			
@@ -287,7 +287,7 @@ function gourl_mp_gateway_load()
 			// i
 			$tmp .= '<tr valign="top">
 	            	<th><label for="'.GOURLMP.'boxstyle">'.__( 'PaymentBox Style', GOURLMP ).'</label></th>
-	            	<td>'.sprintf(__( 'Payment Box <a target="_blank" href="%s">sizes</a> and border <a target="_blank" href="%s">shadow</a> you can change <a href="%s">here &#187;</a>', GOURLMP ), "https://gourl.io/images/global/sizes.png", "https://gourl.io/images/global/styles.png", $this->url."#gourlvericoinprivate_key")."</td>";
+	            	<td>'.sprintf(__( 'Payment Box <a target="_blank" href="%s">sizes</a> and border <a target="_blank" href="%s">shadow</a> you can change <a href="%s">here &#187;</a>', GOURLMP ), "https://gourl.io/images/global/sizes.png", "https://gourl.io/images/global/styles.png", $this->url."#gourlmonetaryunitprivate_key")."</td>";
 			$tmp .= "</tr>";
 				
 				
@@ -400,7 +400,7 @@ function gourl_mp_gateway_load()
 			{
 				$tmp .= "<div class='mp_checkout_error'>".__( "Please try a different payment method. Admin need to install and activate wordpress plugin 'GoUrl Bitcoin Gateway' (https://gourl.io/bitcoin-wordpress-plugin.html) to accept Bitcoin/Altcoin Payments online", GOURLMP )."</div>";
 			}
-			elseif (!$this->payments || !$this->defcoin || true === version_compare($mp->version, '2.9.5', '<') || true === version_compare(GOURL_VERSION, '1.3', '<') ||
+			elseif (!$this->payments || !$this->defcoin || true === version_compare($mp->version, '2.9.5', '<') || true === version_compare(GOURL_VERSION, '1.3.3', '<') ||
 					(array_key_exists($order->order_currency, $this->coin_names) && !array_key_exists($order->order_currency, $this->payments)))
 			{
 				$tmp .= "<div class='mp_checkout_error'>".sprintf(__( 'Sorry, but there was an error processing your order. Please try a different payment method or contact us if you need assistance. (GoUrl Bitcoin Plugin not configured - %s not activated)', GOURLMP ),(!$this->payments || !$this->defcoin?$this->title:$this->coin_names[$order->order_currency]))."</div>";
@@ -617,5 +617,5 @@ function gourl_mp_gateway_load()
 }
 
 
-add_action( 'plugins_loaded', 'gourl_mp_gateway_load', 4 ); 
+add_action( 'plugins_loaded', 'gourl_mp_gateway_load', 4 );   
 
