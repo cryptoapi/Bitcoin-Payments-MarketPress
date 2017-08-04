@@ -1,8 +1,9 @@
 <?php
 /*
 Plugin Name: 		GoUrl MarketPress - Bitcoin Altcoin Payment Gateway Addon
-Description: 		Provides a <a href="https://gourl.io">GoUrl.io</a> Bitcoin/Altcoin Payment Gateway for <a href="https://wordpress.org/plugins/wordpress-ecommerce/">MarketPress 2.9+</a>. Convert your USD/EUR/etc prices to cryptocoins using Google/Bitstamp/Cryptsy Live Exchange Rates; sends the amount straight to your business Bitcoin/Altcoin wallet. Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin, MonetaryUnit payments online. No Chargebacks, Global, Secure. All in automatic mode.
-Version: 			1.1.1
+Plugin URI: 		https://gourl.io/bitcoin-payments-wpmudev-marketpress.html
+Description: 		Provides a <a href="https://gourl.io">GoUrl.io</a> Bitcoin/Altcoin Payment Gateway for <a href="https://wordpress.org/plugins/wordpress-ecommerce/">MarketPress 2.9+</a>. Convert your USD/EUR/etc prices to cryptocoins using Google/Bitstamp/Poloniex Live Exchange Rates; sends the amount straight to your business Bitcoin/Altcoin wallet. Accept Bitcoin, BitcoinCash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, MonetaryUnit payments online. No Chargebacks, Global, Secure. All in automatic mode.
+Version: 			1.1.2
 Author: 			GoUrl.io
 Author URI: 		https://gourl.io
 License: 			GPLv2
@@ -142,7 +143,7 @@ function gourl_mp_gateway_load()
 			}
 				
 			$this->method_description .= "<br/><b>" . __( 'Secure payments with virtual currency in Marketpress. &#160; <a target="_blank" href="https://bitcoin.org/">What is Bitcoin?</a>', GOURLMP ) . '</b><br/>';
-			$this->method_description .= sprintf(__( 'Accept %s payments online in Marketpress.', GOURLMP), ($this->coin_names?ucwords(implode(", ", $this->coin_names)):"Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin, MonetaryUnit")).'<br/>';
+			$this->method_description .= sprintf(__( 'Accept %s payments online in Marketpress.', GOURLMP), ($this->coin_names?ucwords(implode(", ", $this->coin_names)):"Bitcoin, BitcoinCash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, MonetaryUnit")).'<br/>';
 			$this->method_description .= __( 'If you use multiple stores/sites online, please create separate <a target="_blank" href="https://gourl.io/editrecord/coin_boxes/0">GoUrl Payment Box</a> (with unique payment box public/private keys) for each of your stores/websites. Do not use the same GoUrl Payment Box with the same public/private keys on your different websites/stores.', GOURLMP );
 			$this->method_description .= '<br/><br/>';
 			
@@ -617,5 +618,5 @@ function gourl_mp_gateway_load()
 }
 
 
-add_action( 'plugins_loaded', 'gourl_mp_gateway_load', 4 );   
+add_action( 'plugins_loaded', 'gourl_mp_gateway_load', 4 ); 
 

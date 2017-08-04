@@ -3,14 +3,14 @@ Contributors: gourl, GoUrl.io
 Plugin Name: GoUrl MarketPress - Bitcoin Altcoin Payment Gateway Addon
 Plugin URI: https://gourl.io/bitcoin-payments-wpmudev-marketpress.html
 Author URI: https://gourl.io 
-Tags: marketpress, bitcoin, bitcoins, bitcoin payments, gourl, cryptocurrency, btc, coinbase, bitpay, ecommerce, paypal, accept bitcoin, shop, payment, payment gateway, litecoin, dogecoin, darkcoin, dash, speedcoin, vertcoin, reddcoin, feathercoin, vericoin, potcoin, paycoin, monetaryunit, peercoin
+Tags: marketpress, bitcoin, bitcoincash, bitcoin cash, bitcoins, bitcoin payments, gourl, cryptocurrency, btc, coinbase, bitpay, ecommerce, paypal, accept bitcoin, shop, payment, payment gateway, litecoin, dogecoin, dash, speedcoin, vertcoin, reddcoin, feathercoin, potcoin, monetaryunit, peercoin
 Requires at least: 3.5
-Tested up to: 4.3
-Stable Tag: 1.1.1
+Tested up to: 4.9
+Stable Tag: 1.1.2
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Provides Bitcoin/Altcoin Payment Gateway for Wpmudev MarketPress 2.9+ or higher. Accept Bitcoin, Litecoin, Dogecoin, Paycoin, etc Payments on Website
+Provides Bitcoin/Altcoin Payment Gateway for Wpmudev MarketPress 2.9+ or higher. Accept Bitcoin, Bitcoin Cash, Litecoin, Dogecoin, Dash, etc Payments on Website
 
 
 
@@ -22,9 +22,9 @@ Wordpress Plugin for MarketPress Features -
 
 * 100% Free Open Source Plugin on [Github.com](https://github.com/cryptoapi/Bitcoin-Payments-MarketPress)
 * Provides a Cryptocurrency Payment Gateway for [MarketPress 2.9 or higher](https://wordpress.org/plugins/wordpress-ecommerce/)
-* Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin, MonetaryUnit payments in MarketPress
+* Accept Bitcoin, BitcoinCash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, MonetaryUnit payments in MarketPress
 * No Monthly Fee, Transaction Fee from 0%
-* Product Prices in USD/EUR/GBP/etc. Google/Bitstamp/Cryptsy Live Exchange Rates
+* Product Prices in USD/EUR/GBP/etc. Google/Bitstamp/Poloniex Live Exchange Rates
 * Direct Integration on your website, no external payment pages opens (as other payment gateways offer)
 * You will see the bitcoin/altcoin payment statistics in one common table on your website. 
 * No Chargebacks, Global, Secure. All in automatic mode.
@@ -88,8 +88,11 @@ Read here:  https://gourl.io/bitcoin-payments-wpmudev-marketpress.html#notes
 
 == Changelog ==
 
+= 1.1.2 =
+* Added Bitcoin Cash (BCH / BCC)
+
 = 1.1.1 =
-Add MonetaryUnit [MUE] cryptocurrency
+* Add MonetaryUnit [MUE] cryptocurrency
 
 = 1.1.0 =
 * Add Peercoin [PPC] cryptocurrency
